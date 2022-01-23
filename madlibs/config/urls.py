@@ -15,6 +15,6 @@ Including another URLconf
 """
 from django.urls import path
 
-urlpatterns = [
-    
-]
+from madlibs.views import MadlibView
+
+urlpatterns = [path("madlib/", MadlibView.as_view())]
